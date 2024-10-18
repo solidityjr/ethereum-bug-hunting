@@ -152,6 +152,42 @@ Expected Result: The state should revert to its original condition if the transf
 4. Test Results and Analysis
 
 The following table summarizes the results of the test cases:
+1. Valid Contribution:
+
+Description: This test verifies that a user can successfully contribute to the contract with a valid amount.
+
+Outcome: The transaction was successful, and the user's balance was updated accordingly.
+
+
+
+2. Insufficient Balance:
+
+Description: This test checks that the contract properly rejects contributions when the user has an insufficient balance.
+
+Outcome: The transaction was correctly rejected with an error message indicating insufficient funds.
+
+
+
+3. State Management After Withdrawal:
+
+Description: This test ensures that the state of the contract is correctly managed after a user withdraws funds.
+
+Outcome: The contract's state was updated accurately, reflecting the withdrawal, and the user's balance decreased as expected.
+
+
+4. Transfer Failure Handling:
+
+Description: This test evaluates how the contract handles failures in fund transfers.
+
+Outcome: The contract correctly identified the failure and reverted the transaction, ensuring no funds were lost.
+
+
+
+5. Edge Case Handling:
+
+Description: This test checks the contract's response to edge cases, such as zero contributions or negative values.
+
+Outcome: The contract appropriately rejected these edge cases, maintaining robustness and security.
 
 4.1 Analysis
 
